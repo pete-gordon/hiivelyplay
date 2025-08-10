@@ -33,7 +33,7 @@ LDFLAGS	=	-g $(MACHDEP) -mrvl -Wl,-Map,$(notdir $@).map
 #---------------------------------------------------------------------------------
 # any extra libraries we wish to link with the project
 #---------------------------------------------------------------------------------
-LIBS	:=	-lpng -lz -lfat -lwiiuse -lbte -logc -lm
+LIBS	:=	-lasnd -lpng -lz -lfat -lwiiuse -lbte -logc -lm
 
 #---------------------------------------------------------------------------------
 # list of directories containing libraries, this must be the top level containing
@@ -80,16 +80,24 @@ export OFILES	:=	$(addsuffix .o,$(BINFILES)) \
 #---------------------------------------------------------------------------------
 # build a list of include paths
 #---------------------------------------------------------------------------------
+PORTLIBS_PPC_INC	:=	$(PORTLIBS_PATH)/ppc/include
+PORTLIBS_WII_INC	:=	$(PORTLIBS_PATH)/wii/include
 export INCLUDE	:=	$(foreach dir,$(INCLUDES), -iquote $(CURDIR)/$(dir)) \
 					$(foreach dir,$(LIBDIRS),-I$(dir)/include) \
 					-I$(CURDIR)/$(BUILD) \
-					-I$(LIBOGC_INC)
+					-I$(LIBOGC_INC) \
+					-I$(PORTLIBS_PPC_INC) \
+					-I$(PORTLIBS_WII_INC)
 
 #---------------------------------------------------------------------------------
 # build a list of library paths
 #---------------------------------------------------------------------------------
+PORTLIBS_PPC_LIB	:=	$(DEVKITPRO)/portlibs/ppc/lib
+PORTLIBS_WII_LIB	:=	$(DEVKITPRO)/portlibs/wii/lib
 export LIBPATHS	:=	$(foreach dir,$(LIBDIRS),-L$(dir)/lib) \
-					-L$(LIBOGC_LIB)
+					-L$(LIBOGC_LIB) \
+					-L$(PORTLIBS_PPC_LIB) \
+					-L$(PORTLIBS_WII_LIB)
 
 export OUTPUT	:=	$(CURDIR)/$(TARGET)
 .PHONY: $(BUILD) clean

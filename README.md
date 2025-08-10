@@ -25,6 +25,9 @@
 ## License
 Hiivelyplay is GPL v2, GRRLIB is MIT license and libpng is "PNG Reference Library License version 2"
 
+## External libraries for compiling
+- Install **ppc-zlib** using (dkp-)pacman from DevkitPro
+
 ## How to use with the Homebrew Channel:
 1. Run make to compile the player and rename the **HiivelyPlay.dol** to **boot.dol**
 2. Create folder hiivelyplay on the sd card: /apps/hiivelyplay/

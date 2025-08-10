@@ -19,7 +19,7 @@
                  Hively logo: Spot/Up Rough
 
 
-                http://www.hivelytracker.com
+                http://www.hivelytracker.co.uk
                     http://www.irishq.dk
 
 ## License

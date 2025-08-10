@@ -85,7 +85,7 @@ char *scrollatxt =	"Welcome to HiivelyPlay v2.0 brought to you by IRIS in AD 200
 "Thanks to everyone who directly or indirectly contributed to HivelyTracker, especially Spot, "
 "BuZz, pieknyman, Syphus, FluBBa, Dexter, Pink, Itix and Per Johansson.   ::   "
 "Greetings to everyone active on the Amiga, C64 and Wii demoscenes!   ::   "
-"Get the latest HivelyTracker software, news and info from www.hivelytracker.com !   ::   ";
+"Get the latest HivelyTracker software, news and info from www.hivelytracker.co.uk !   ::   ";
 
 char *scrollbtxt =	"Controls: On the main screen use the up and down arrows to scroll through the list of tunes. "
 "The play button will start playing the tune highighted with the black outline box. Alternatively "
